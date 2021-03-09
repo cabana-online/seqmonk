@@ -15,7 +15,14 @@ USER root
 RUN set -xe; \
     \
     apt-get update && \
-    apt-get install -y x11-apps fontconfig ttf-dejavu openjdk-11-jre
+    apt-get install -y openjdk-11-jre
+
+# Removes development tools.
+RUN set -xe; \
+    \
+    cd /opt/scripts && ./uninstall.sh && \
+    apt-get clean && \
+    apt-get autoclean;
 
 USER cabana
 
