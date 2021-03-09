@@ -1,0 +1,3 @@
+[submodule "docker-helper-scripts"]
+	path = docker-helper-scripts
+	url = https://github.com/cabana-online/docker-helper-scripts.git
